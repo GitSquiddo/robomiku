@@ -90,4 +90,4 @@ bot.on('message', message => {
             }
     })
 
-client.login(process.env.Erh_6L5eP5rdSpjzHjonlJqy8B1dOYjH);
+client.login(process.env.NjIyNDk3NDQzNTc3MzMxNzEz.XX6O6g.u5OyXcJEX1c7JU6icwZseQsuR7o);
