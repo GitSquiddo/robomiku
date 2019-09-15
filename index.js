@@ -80,14 +80,8 @@ bot.on('message', message => {
                 .then(msg => msg.delete(5000));
             }
             break;
-
-
-
-
-
-
-
+            
             }
-    })
+});
 
 client.login(process.env.NjIyNDk3NDQzNTc3MzMxNzEz.XX6O6g.u5OyXcJEX1c7JU6icwZseQsuR7o);
