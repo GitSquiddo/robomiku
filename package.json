@@ -4,11 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "node .": "node run index.js"
   },
+  "author": "Squiddo",
+  "license": "ISC",
   "dependencies": {
-    "discord.js": "11.51",
-    "request": "2.810"
+    "discord.js": "^11.5.1"
   }
 }
- 
