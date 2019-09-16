@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
-const client = new Client();
+const client = new Discord.Client();
 
-const token = 'NjIyNDk3NDQzNTc3MzMxNzEz.XX6Big.ZteLJLpirndjARqklFyT4MgmvuU';
+const token = 'NjIyNDk3NDQzNTc3MzMxNzEz.XX_p-g.JIBIecvwxq86zkjOQQEjy5LoQsU'
 
 const PREFIX = '!';
 
@@ -10,15 +10,15 @@ var version = '0.0.6a'
 
 const usedCommandRecently = new Set();
 
-bot.on('ready', () => {
+client.on('ready', () => {
     console.log('RoboMiku is online!');
-    bot.user.setActivity('Just Shapes & Beats', {
+    client.user.setActivity('Just Shapes & Beats', {
         type: 'PLAYING'
     }).catch(console.error);
 
 })
 
-bot.on('guildMemberAdd', member => {
+client.on('guildMemberAdd', member => {
 
     const channel = member.guild.channels.find(channel => channel.name === "welcome");
     if (!channel) return;
@@ -26,7 +26,7 @@ bot.on('guildMemberAdd', member => {
     channel.send(`Hello there, ${member}! I am RoboMiku, the bot for this server, and I would like to welcome you! :grin: Before you continue, I reccommend you check the rules in the rules channel first! See ya later! :wave:`)
 });
 
-bot.on('message', message => {
+client.on('message', message => {
 
     let args = message.content.substring(PREFIX.length).split(" ");
 
@@ -80,8 +80,14 @@ bot.on('message', message => {
                 .then(msg => msg.delete(5000));
             }
             break;
-            
-            }
-});
 
-bot.login(token);
+
+
+
+
+
+
+            }
+    })
+//THIS MUST BE THIS WAY
+client.login(token);
