@@ -2,12 +2,12 @@
   "name": "robomiku",
   "version": "0.0.6a",
   "description": "",
-  "main": "index.js",
+  "main": "bot.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "node bot.js",
   },
   "dependencies": {
-    "discord.js": "^11.5.1"
+    "discord.js": "11.1.0"
     "request": "2.81.0
   }
 }
