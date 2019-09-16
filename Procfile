@@ -1,1 +1,1 @@
-heroku ps:scale web=0 worker=1
+worker: lein run -m index.js
