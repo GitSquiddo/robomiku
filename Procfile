@@ -1,1 +1,1 @@
-worker: lein run -m index.js
+worker: node bot.js
