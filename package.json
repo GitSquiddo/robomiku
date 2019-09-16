@@ -1,7 +1,7 @@
 {
   "name": "robomiku",
   "version": "0.0.6a",
-  "description": "",
+  "description": "A simple bot that is currently in development.",
   "main": "bot.js",
   "scripts": {
     "start": "node bot.js",
