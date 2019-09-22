@@ -89,4 +89,4 @@ client.on('message', message => {
             }
     })
 //THIS MUST BE THIS WAY
-client.login(process.env.EXAMPLE_TOKEN);
+client.login(process.env.NjIyNDk3NDQzNTc3MzMxNzEz.XYerDw.LLh0S2FbrP6bLeDJK0rS0RSYz1Q);
