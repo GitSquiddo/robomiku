@@ -74,4 +74,4 @@ client.on('ready', () => {
         }
     
     });
-    client.login(process.env.NjIyNDk3NDQzNTc3MzMxNzEz.XZUIZg.cJJsi_d-vKOf0NVjnrB-C1bvgkk)
+    client.login(process.env.NjIyNDk3NDQzNTc3MzMxNzEz.XZUJ-Q.GghctnuihaN5qPaN8hDXH1RR9pk)
