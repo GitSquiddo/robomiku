@@ -1,14 +1,11 @@
-const {
-    Client,
-    Attachment
-} = require('discord.js');
+const Discord = require('discord.js');
 
 const client = new Discord.Client();
 
 const PREFIX = '!';
 
 
-var version = '0.0.7a'
+var version = '0.1.0a'
 
 
 const usedCommandRecently = new Set();
@@ -17,7 +14,7 @@ const usedCommandRecently = new Set();
 
 client.on('ready', () => {
     console.log('RoboMiku is online, and running version ' + version + '!');
-  client.user.setActivity('No Man\'s Sky', {
+  client.user.setActivity('TJoC: Halloween Edition', {
         type: 'PLAYING'
     }).catch(console.error);
 })
