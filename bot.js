@@ -47,7 +47,8 @@ client.on('ready', () => {
             case 'clear':
                 if (!args[1]) return message.reply('Oops! You didn\'t define how many you wanted to clear, so I couldn\'t do anything! :worried: Please try again.')
                     .then(msg => msg.delete(5000));
-                if(!message.member.roles.find(r => r.name === "RoboMiku's Creator")) return message.channel.send('Sorry, I can\'t let you clear any messages because you do not have the needed roles!').then(msg => msg.delete(5000));
+                if(!message.member.roles.find(r => r.name === "RoboMiku's Creator")) return message.channel.send('Sorry, I can\'t let you clear any messages because you do not have the needed roles!')
+                    .then(msg => msg.delete(5000));
                 message.channel.bulkDelete(args[1]);
                 break;
             case 'hello':
