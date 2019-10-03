@@ -66,7 +66,7 @@ client.on('ready', () => {
                 break;
             case 'mew':
                 const taggedUser = message.mentions.users.first();
-                message.channel.send(message.author + ` mewed at ${taggedUser.username}! *purr*`)
+                message.channel.send(message.author.username + ` mewed at ${taggedUser.username}! *purr*`)
                 if (!message.mentions.users.size) {
                     return message.reply('I need to know who you want to mew at!')
                         .then(msg => msg.delete(5000));
