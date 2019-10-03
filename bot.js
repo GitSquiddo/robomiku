@@ -56,7 +56,7 @@ client.on('ready', () => {
                 break;
             case 'profile':
                 const embed = new Discord.RichEmbed()
-                    .setTitle('__User Information__')
+                    .setTitle('__' + message.author + \'s Profile__')
                     .addField('Player Name', message.author.username, true)
                     .addField('Version', version, true)
                     .addField('Current Server', message.guild.name, true)
