@@ -56,7 +56,7 @@ client.on('ready', () => {
                 break;
             case 'profile':
                 const embed = new Discord.RichEmbed()
-                    .setTitle('__' + message.author.username + \'s Profile__')
+                    .setTitle('__' + message.author.username + '\'s Profile__')
                     .addField('Version', version, true)
                     .addField('Current Server', message.guild.name, true)
                     .setColor(0xF1C40F)
