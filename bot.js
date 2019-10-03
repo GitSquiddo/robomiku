@@ -52,7 +52,7 @@ client.on('ready', () => {
                 message.channel.bulkDelete(args[1]);
                 break;
             case 'hello':
-                message.reply('hewwo! :blush:')
+                message.channel.send('Hewwo, ' + message.author.username + '! :blush:')
                 break;
             case 'profile':
                 const embed = new Discord.RichEmbed()
