@@ -64,7 +64,7 @@ client.on('ready', () => {
             case 'mew':
                 const taggedUser = message.mentions.users.first();
                 if (${taggedUser.username} === 'RoboMiku') {
-                    return message.channel.send(message.author.username + ' mewed at me! Thank chu! :blush:')
+                    message.channel.send(message.author.username + ' mewed at me! Thank chu! :blush:')
                 } else {
                 message.channel.send(message.author.username + ` mewed at ${taggedUser.username}! *purr*`)
                 }
