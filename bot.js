@@ -7,10 +7,7 @@ const PREFIX = '!';
 
 var version = '0.1.0a'
 
-
 const usedCommandRecently = new Set();
-
-
 
 client.on('ready', () => {
     console.log('RoboMiku is online, and running version ' + version + '!');
@@ -72,7 +69,17 @@ client.on('ready', () => {
                         .then(msg => msg.delete(5000));
                 }
                 break;
-        }
+            case 'command':
+                   if (usedCommandRecently.has(message.author.id)) {
+            message.channel.send('Sorry, ' + message.author.username + ', I can\'t let you use this command. Try again in 60 seconds.');
+    } else {
+        message.channel.send('This is a placeholder command until Squiddo can figure something out. Bye!')
+        usedCommandRecently.add(message.author.id);
+        setTimeout(() => {
+          usedCommandRecently.delete(message.author.id);
+        }, 60000);
+    }
+                break;
     
     });
     client.login(process.env.BOT_TOKEN)
