@@ -56,7 +56,7 @@ client.on('ready', () => {
                     .setTitle('__' + message.author.username + '\'s Profile__')
                     .addField('Version', version, true)
                     .addField('Current Server', message.guild.name, true)
-                    .setColor(0xF1C40F)
+                    .setColor(277ECD)
                     .setThumbnail(message.author.avatarURL)
                     .setFooter('I\'m totally not a robot!')
                 message.channel.sendEmbed(embed);
