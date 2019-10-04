@@ -73,5 +73,5 @@ client.on('ready', () => {
                 message.channel.send('Why are you looking at me like I have to do something? I don\'t have a proper command!')
                 break;
     
-    });
-    client.login(process.env.BOT_TOKEN)
+});
+client.login(process.env.BOT_TOKEN)
