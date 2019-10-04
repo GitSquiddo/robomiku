@@ -70,15 +70,7 @@ client.on('ready', () => {
                 }
                 break;
             case 'command':
-                   if (usedCommandRecently.has(message.author.id)) {
-                       return message.channel.send('Sorry, ' + message.author.username + ', I can\'t let you use this command. Try again in 60 seconds.');
-                   } else {
-                          message.channel.send('This is a placeholder command until Squiddo can figure something out. Bye!')
-        usedCommandRecently.add(message.author.id);
-        setTimeout(() => {
-          usedCommandRecently.delete(message.author.id);
-                       }, 60000);
-                   }
+                message.channel.send('Why are you looking at me like I have to do something? I don\'t have a proper command!')
                 break;
     
     });
