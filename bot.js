@@ -5,7 +5,7 @@ const client = new Discord.Client();
 const PREFIX = '!';
 
 
-var version = '0.1.01a'
+var version = '0.1.02a'
 
 const usedCommandRecently = new Set();
 
@@ -63,7 +63,11 @@ client.on('ready', () => {
                 break;
             case 'mew':
                 const taggedUser = message.mentions.users.first();
+                if (${taggedUser.username} === 'RoboMiku') {
+                    return message.channel.send(message.author.username + ' mewed at me! Thank chu! :blush:')
+                } else {
                 message.channel.send(message.author.username + ` mewed at ${taggedUser.username}! *purr*`)
+                }
                 if (!message.mentions.users.size) {
                     return message.reply('I need to know who you want to mew at!')
                         .then(msg => msg.delete(5000));
