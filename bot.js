@@ -77,7 +77,7 @@ client.on('ready', () => {
         usedCommandRecently.add(message.author.id);
         setTimeout(() => {
           usedCommandRecently.delete(message.author.id);
-        }, 60000);
+                       }, 60000);
     }
                 break;
     
