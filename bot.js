@@ -64,10 +64,14 @@ client.on('ready', () => {
                 break;
             case 'mew':
                 const taggedUser = message.mentions.users.first();
+                if (taggedUser === 'RoboMiku') {
+                    message.channel.send(message.author.username + ' mewed at me! Thank chu! :blush:')
+                } else {
                 message.channel.send(message.author.username + ` mewed at ${taggedUser.username}! *purr*`)
+                }
                 if (!message.mentions.users.size) {
-                    return message.reply('I need to know who you want to mew at!')
-                        .then(msg => msg.delete(5000));
+                return message.reply('I need to know who you want to mew at!')
+                    .then(msg => msg.delete(5000));
                 }
                 break;
         }
