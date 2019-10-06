@@ -11,13 +11,22 @@ const usedCommandRecently = new Set();
 
 client.on('ready', () => {
     console.log('RoboMiku is online, and running version ' + version + '!');
-  client.user.setActivity('TJoC: Halloween Edition', {
+    client.user.setActivity('TJoC: Halloween Edition', {
         type: 'PLAYING'
     }).catch(console.error);
 })
 
+var answersForHello = [
+  "Hey",
+  "Howdy",
+  "Hello there",
+  "Nice to see you",
+  "Hewwo"
+]
 
-   client.on('guildMemberAdd', member => {
+var randomAnswer = answers[Math.floor(Math.random() * answers.length)];
+   
+    client.on('guildMemberAdd', member => {
 
         const channel = member.guild.channels.find(channel => channel.name === "welcome");
         if (!channel) return;
@@ -50,7 +59,7 @@ client.on('ready', () => {
                 message.channel.bulkDelete(args[1]);
                 break;
             case 'hello':
-                message.channel.send('Hewwo, ' + message.author.username + '! :blush:')
+                message.channel.send(randomAnswer + ', ' + message.author.username + '!')
                 break;
             case 'profile':
                 const embed = new Discord.RichEmbed()
@@ -63,17 +72,14 @@ client.on('ready', () => {
                 message.channel.sendEmbed(embed);
                 break;
             case 'mew':
-                const taggedUser = message.mentions.users.first();
-                if (taggedUser === 'SpookyMiku') {
-                    message.channel.send(message.author.username + ' mewed at me! Thank chu! :blush:')
-                } else {
-                message.channel.send(message.author.username + ` mewed at ${taggedUser.username}! *purr*`)
-                }
+                const pingedUser = message.mentions.users.first();
+                message.channel.send(message.author.username + ` mewed at ${pingedUser.username}! *purr*`)
                 if (!message.mentions.users.size) {
                 return message.reply('I need to know who you want to mew at!')
                     .then(msg => msg.delete(5000));
                 }
                 break;
+                
         }
 
     });
