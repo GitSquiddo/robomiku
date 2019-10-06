@@ -23,8 +23,6 @@ var answersForHello = [
   "Nice to see you",
   "Hewwo"
 ]
-
-var randomAnswer = answersForHello[Math.floor(Math.random() * answersForHello.length)];
    
     client.on('guildMemberAdd', member => {
 
@@ -59,6 +57,7 @@ var randomAnswer = answersForHello[Math.floor(Math.random() * answersForHello.le
                 message.channel.bulkDelete(args[1]);
                 break;
             case 'hello':
+                const randomAnswer = answersForHello[Math.floor(Math.random() * answersForHello.length)];
                 message.channel.send(randomAnswer + ', ' + message.author.username + '!')
                 break;
             case 'profile':
