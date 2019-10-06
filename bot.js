@@ -21,7 +21,8 @@ var answersForHello = [
   "Howdy",
   "Hello there",
   "Nice to see you",
-  "Hewwo"
+  "Hewwo",
+  "Greetings"
 ]
    
     client.on('guildMemberAdd', member => {
