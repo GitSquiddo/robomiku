@@ -45,6 +45,14 @@ var answersForMew2 = [
     "Where\'s the dog?",
     "Very interesting.. :thinking:"
 ]
+
+var answersForPing = [
+    "Pong!",
+    "Pingity pong!",
+    "Oreo! ~~No, wait..~~",
+    "Super combo pong!",
+    "Pinger ponger!"
+]
     
     
 
@@ -62,7 +70,8 @@ var answersForMew2 = [
 
         switch (args[0]) {
             case 'ping':
-                message.channel.sendMessage('pong!')
+                const randomAnswerPing = answersForPing[Math.floor(Math.random() * answersForPing.length)];
+                message.channel.sendMessage(randomAnswerPing)
                 break;
             case 'info':
                 if (args[1] === 'version') {
