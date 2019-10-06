@@ -24,7 +24,8 @@ var answersForHello = [
   "Hewwo",
   "Greetings",
   "Welcome back",
-  "Hi! Didn\'t see you there"
+  "Hi! Didn\'t see you there",
+  "Por qué, hola"
 ]
    
 var answersForMew1 = [
@@ -32,7 +33,8 @@ var answersForMew1 = [
     "So cute! ",
     "Incredible! ",
     "Oh! ",
-    "*I'm lovin\' it!*  "
+    "*I'm lovin\' it!*  ",
+    "*:O* "
 ]
 
 var answersForMew2 = [
@@ -40,7 +42,8 @@ var answersForMew2 = [
     "*UwU*",
     "*purr*",
     "Guess people can be cats too. Weird.",
-    "Where\'s the dog?"
+    "Where\'s the dog?",
+    "Very interesting.. :thinking:"
 ]
     
     
