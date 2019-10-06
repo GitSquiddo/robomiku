@@ -27,6 +27,24 @@ var answersForHello = [
   "Hi! Didn\'t see you there"
 ]
    
+var answersForMew1 = [
+    "Look at that! ",
+    "So cute! ",
+    "Incredible! ",
+    "Oh!",
+    "*I'm lovin\' it!* "
+]
+
+var answersForMew2 = [
+    "~~I ship it.~~",
+    "*UwU*",
+    "*purr*",
+    "Guess people can be cats too. Weird.",
+    "Where\'s the dog?"
+]
+    
+    
+
     client.on('guildMemberAdd', member => {
 
         const channel = member.guild.channels.find(channel => channel.name === "welcome");
@@ -60,8 +78,8 @@ var answersForHello = [
                 message.channel.bulkDelete(args[1]);
                 break;
             case 'hello':
-                const randomAnswer = answersForHello[Math.floor(Math.random() * answersForHello.length)];
-                message.channel.send(randomAnswer + ', ' + message.author.username + '!')
+                const randomAnswerHello = answersForHello[Math.floor(Math.random() * answersForHello.length)];
+                message.channel.send(randomAnswerHello + ', ' + message.author.username + '!')
                 break;
             case 'profile':
                 const embed = new Discord.RichEmbed()
@@ -75,7 +93,9 @@ var answersForHello = [
                 break;
             case 'mew':
                 const pingedUser = message.mentions.users.first();
-                message.channel.send(message.author.username + ` mewed at ${pingedUser.username}! *purr*`)
+                const randomAnswerMew1 = answersForMew1[Math.floor(Math.random() * answersForMew1.length)];
+                const randomAnswerMew2 = answersForMew2[Math.floor(Math.random() * answersForMew2.length)];
+                message.channel.send(randomAnswerMew1 + message.author.username + ` mewed at ${pingedUser.username}! ` + randomAnswerMew2)
                 if (!message.mentions.users.size) {
                 return message.reply('I need to know who you want to mew at!')
                     .then(msg => msg.delete(5000));
