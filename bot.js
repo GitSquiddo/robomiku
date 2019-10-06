@@ -104,8 +104,8 @@ var answersForMew2 = [
                     .then(msg => msg.delete(5000));
                 }
                 break;
-            case 'weeb':
-                message.channel.send('Oh, you mean this? https://m.youtube.com/watch?v=S5RRCyCkiCk');
+            case 'weebs':
+                message.channel.send('Oh, so you want this? https://m.youtube.com/watch?v=S5RRCyCkiCk');
                 break;
                 
         }
