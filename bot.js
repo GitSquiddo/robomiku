@@ -34,7 +34,7 @@ var answersForMew1 = [
     "Incredible! ",
     "Oh! ",
     "*I'm lovin\' it!*  ",
-    "*:O* "
+    "*:O*  Whoah! "
 ]
 
 var answersForMew2 = [
