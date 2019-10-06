@@ -24,7 +24,7 @@ var answersForHello = [
   "Hewwo"
 ]
 
-var randomAnswer = answers[Math.floor(Math.random() * answers.length)];
+var randomAnswer = answersForHello[Math.floor(Math.random() * answersForHello.length)];
    
     client.on('guildMemberAdd', member => {
 
