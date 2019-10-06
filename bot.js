@@ -5,7 +5,7 @@ const client = new Discord.Client();
 const PREFIX = '!';
 
 
-var version = '0.1.03a'
+var version = '0.1.1a'
 
 const usedCommandRecently = new Set();
 
