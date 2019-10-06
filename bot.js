@@ -31,7 +31,7 @@ var answersForMew1 = [
     "Look at that! ",
     "So cute! ",
     "Incredible! ",
-    "Oh!",
+    "Oh! ",
     "*I'm lovin\' it!* "
 ]
 
