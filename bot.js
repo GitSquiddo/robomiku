@@ -4,6 +4,20 @@ const client = new Discord.Client();
 
 const PREFIX = '!';
 
+var activityDoing = [
+    "with her anxiety",
+    "Attack on Titans",
+    "with her dog",
+    "Killing with Cuteness",
+    "her favorite song"
+]
+
+var activityType = [
+    "PLAYING",
+    "STREAMING",
+    "WATCHING",
+    "LISTENING"
+]
 
 var version = '0.1.1a'
 
@@ -11,8 +25,10 @@ const usedCommandRecently = new Set();
 
 client.on('ready', () => {
     console.log('RoboMiku is online, and running version ' + version + '!');
-    client.user.setActivity('How2 Kill w/ Cuteness', {
-        type: 'WATCHING'
+    const randomActivityDoing = activityDoing[Math.floor(Math.random() * activityDoing.length)];
+    const randomActivityType = activityType[Math.floor(Math.random() * activityType.length)];
+    client.user.setActivity(randomActivityDoing, {
+        type: randomActivityType
     }).catch(console.error);
 })
 
