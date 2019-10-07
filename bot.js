@@ -19,7 +19,7 @@ var activityType = [
     "LISTENING"
 ]
 
-var version = '0.1.1a'
+var version = '0.1.11a'
 
 const usedCommandRecently = new Set();
 
