@@ -1,5 +1,7 @@
 const Discord = require('discord.js');
 
+const Sequelize = require('sequelize');
+
 const client = new Discord.Client();
 
 const PREFIX = '!';
