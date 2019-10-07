@@ -160,7 +160,7 @@ var answersForPing = [
                 break;
             case 'money':
                 const target = message.mentions.users.first() || message.author;
-                return message.channel.send(`${target.tag} has ~~M~~ ${currency.getBalance(target.id)}💰`);
+                return message.channel.send(`${target.tag} has ~~M~~ ${currency.getBalance(target.id)}`);
                 
         }
 
