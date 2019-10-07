@@ -106,7 +106,12 @@ var answersForPing = [
 
    client.on('message', async message => {
            if (message.author.bot) return;
-	       currency.add(message.author.id, 1);
+	   currency.add(message.author.id, 1);
+	   
+if (!message.content.startsWith(PREFIX)) return;
+	const input = message.content.slice(PREFIX.length).trim();
+	if (!input.length) return;
+	const [, command, commandArgs] = input.match(/(\w+)\s*([\s\S]*)/);
 
         let args = message.content.substring(PREFIX.length).split(" ");
 
