@@ -5,7 +5,7 @@ const client = new Discord.Client();
 const PREFIX = '!';
 
 var activityDoing = [
-    "with her anxiety",
+    "you!",
     "Attack on Titans",
     "with her dog",
     "Killing with Cuteness",
