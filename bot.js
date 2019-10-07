@@ -11,8 +11,8 @@ const usedCommandRecently = new Set();
 
 client.on('ready', () => {
     console.log('RoboMiku is online, and running version ' + version + '!');
-    client.user.setActivity('TJoC: Halloween Edition', {
-        type: 'PLAYING'
+    client.user.setActivity('How to make a salad from possessed vegetables', {
+        type: 'WATCHING'
     }).catch(console.error);
 })
 
