@@ -166,6 +166,7 @@ if (!message.content.startsWith(PREFIX)) return;
             case 'money':
                 const target = message.mentions.users.first() || message.author;
                 return message.channel.send(`${target.tag} has ~~M~~ ${currency.getBalance(target.id)}`);
+		break;
                 
         }
 
