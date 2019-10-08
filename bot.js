@@ -1,30 +1,7 @@
 const Discord = require('discord.js');
-const { Users, CurrencyShop } = require('./dbObjects');
-const { Op } = require('sequelize');
-const currency = new Discord.Collection();
 const client = new Discord.Client();
 
 const PREFIX = '!';
-
-Reflect.defineProperty(currency, 'add', {
-	value: async function add(id, amount) {
-		const user = currency.get(id);
-		if (user) {
-			user.balance += Number(amount);
-			return user.save();
-		}
-		const newUser = await Users.create({ user_id: id, balance: amount });
-		currency.set(id, newUser);
-		return newUser;
-	},
-});
-
-Reflect.defineProperty(currency, 'getBalance', {
-	value: function getBalance(id) {
-		const user = currency.get(id);
-		return user ? user.balance : 0;
-	},
-});
 
 var activityDoing = [
     "you!",
@@ -45,15 +22,13 @@ var version = '0.1.11a'
 
 const usedCommandRecently = new Set();
 
-client.once('ready', async () => {
+client.on('ready', async () => {
     console.log('RoboMiku is online, and running version ' + version + '!');
     const randomActivityDoing = activityDoing[Math.floor(Math.random() * activityDoing.length)];
     const randomActivityType = activityType[Math.floor(Math.random() * activityType.length)];
     client.user.setActivity(randomActivityDoing, {
         type: randomActivityType
     }).catch(console.error);
-    const storedBalances = await Users.findAll();
-    storedBalances.forEach(b => currency.set(b.user_id, b));
 })
 
 var answersForHello = [
@@ -105,8 +80,6 @@ var answersForPing = [
     });
 
    client.on('message', async message => {
-           if (message.author.bot) return;
-	   currency.add(message.author.id, 1);
 
         let args = message.content.substring(PREFIX.length).split(" ");
 
@@ -158,18 +131,7 @@ var answersForPing = [
             case 'weebs':
                 message.channel.send('Oh, so you want this? https://m.youtube.com/watch?v=S5RRCyCkiCk');
                 break;
-            case 'money':
-                var target = message.mentions.users.first() || message.author;
-                return message.channel.send(`${target.tag} has ~~M~~ ${currency.getBalance(target.id)}`);
-		break;
-	    case 'inventory':
-		var target = message.mentions.users.first() || message.author;
-                const user = await Users.findOne({ where: { user_id: target.id } });
-                const items = await user.getItems();
 
-                if (!items.length) return message.channel.send(`Sorry! Guess ${target.tag} has nothing!`);
-                return message.channel.send(`Let\'s see what ${target.tag} currently has ${items.map(i => `${i.amount} ${i.item.name}`).join(', ')}`);
-		break;
                 
         }
 
