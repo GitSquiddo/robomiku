@@ -1,2 +1,3 @@
-# robomiku
-.
+# RoboMiku
+
+### Say hello to RoboMiku.
