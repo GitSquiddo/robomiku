@@ -167,6 +167,14 @@ if (!message.content.startsWith(PREFIX)) return;
                 const target = message.mentions.users.first() || message.author;
                 return message.channel.send(`${target.tag} has ~~M~~ ${currency.getBalance(target.id)}`);
 		break;
+	    case 'inventory':
+		const target = message.mentions.users.first() || message.author;
+                const user = await Users.findOne({ where: { user_id: target.id } });
+                const items = await user.getItems();
+
+                if (!items.length) return message.channel.send(`Sorry! Guess ${target.tag} has nothing!`);
+                return message.channel.send(`Let\'s see what ${target.tag} currently has ${items.map(i => `${i.amount} ${i.item.name}`).join(', ')}`);
+		break;
                 
         }
 
