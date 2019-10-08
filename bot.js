@@ -101,7 +101,7 @@ var answersForPing = [
         const channel = member.guild.channels.find(channel => channel.name === "welcome");
         if (!channel) return;
 
-        channel.send(`Hello there, ${member}! I am RoboMiku, the bot for this server, and I would like to welcome you! :grin: Before you continue, I reccommend you check the rules in the rules channel first! See ya later! :wave:`)
+        channel.send(`Hello there, ${member}! I am RoboMiku, the bot for this server, and I would like to welcome you! :grin:\n\n Before you continue, I reccommend you check the rules in the rules channel first!\n\n See ya later! :wave:`)
     });
 
    client.on('message', async message => {
