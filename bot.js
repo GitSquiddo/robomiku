@@ -164,11 +164,11 @@ if (!message.content.startsWith(PREFIX)) return;
                 message.channel.send('Oh, so you want this? https://m.youtube.com/watch?v=S5RRCyCkiCk');
                 break;
             case 'money':
-                const target = message.mentions.users.first() || message.author;
+                var target = message.mentions.users.first() || message.author;
                 return message.channel.send(`${target.tag} has ~~M~~ ${currency.getBalance(target.id)}`);
 		break;
 	    case 'inventory':
-		const target = message.mentions.users.first() || message.author;
+		var target = message.mentions.users.first() || message.author;
                 const user = await Users.findOne({ where: { user_id: target.id } });
                 const items = await user.getItems();
 
