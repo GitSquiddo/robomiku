@@ -84,7 +84,12 @@ var answersForPing = [
     "Oreo! ~~No, wait..~~",
     "Super combo pong!",
     "Pinger ponger!",
-    "Try asking Alexa that." + Client.sendFile(bot-testing) https://giphy.com/gifs/fairy-tail-angry-fvcrSYkOmtP8c.gif)
+    "{embed: { 
+    color: 16777215, description:'Test', 
+    image:  {
+        url: "https://giphy.com/gifs/fairy-tail-angry-fvcrSYkOmtP8c.gif"
+    }
+    }});"
 ]
     
     
