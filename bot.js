@@ -85,7 +85,6 @@ var answersForPing = [
     "Super combo pong!",
     "Pinger ponger!",
     "{embed: { 
-    color: 16777215, description:'Test', 
     image:  {
         url: "https://giphy.com/gifs/fairy-tail-angry-fvcrSYkOmtP8c.gif"
     }
