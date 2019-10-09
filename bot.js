@@ -64,7 +64,7 @@ var answersForMew1 = [
     "Incredible! ",
     "Oh! ",
     "*I'm lovin\' it!*  ",
-    "*:open_mouth:*  Whoah! "
+    "*:open_mouth:*  Whoah! ",
     "I have no words! "
 ]
 
