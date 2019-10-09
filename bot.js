@@ -83,7 +83,7 @@ var answersForPing = [
     "Pingity pong!",
     "Oreo! ~~No, wait..~~",
     "Super combo pong!",
-    "Pinger ponger!"
+    "Pinger ponger!",
     "Try asking Alexa that." + Client.sendFile(bot-testing, https://giphy.com/gifs/fairy-tail-angry-fvcrSYkOmtP8c)
 ]
     
