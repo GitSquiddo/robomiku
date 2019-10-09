@@ -84,7 +84,7 @@ var answersForPing = [
     "Oreo! ~~No, wait..~~",
     "Super combo pong!",
     "Pinger ponger!",
-    "https://giphy.com/gifs/fairy-tail-angry-fvcrSYkOmtP8c"
+    'https://giphy.com/gifs/fairy-tail-angry-fvcrSYkOmtP8c'
 ]
     
     
@@ -156,6 +156,10 @@ var answersForPing = [
             case 'weebs':
                 message.channel.send('Oh, so you want this? https://m.youtube.com/watch?v=S5RRCyCkiCk');
                 break;
+            case 'gif':
+		message.channel.send(`Alright, here you go!`, {
+                    file: "https://media.giphy.com/media/nervous-anxiety-12nMEydAAgCxYA/giphy.gif"
+                });
 
                 
         }
