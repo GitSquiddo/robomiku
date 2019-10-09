@@ -84,7 +84,7 @@ var answersForPing = [
     "Oreo! ~~No, wait..~~",
     "Super combo pong!",
     "Pinger ponger!",
-    "https://giphy.com/gifs/fairy-tail-angry-fvcrSYkOmtP8c.gif"
+    "https://giphy.com/gifs/fairy-tail-angry-fvcrSYkOmtP8c"
 ]
     
     
