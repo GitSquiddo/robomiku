@@ -76,14 +76,14 @@ var answersForPing = [
         const channel = member.guild.channels.find(channel => channel.name === "member-logs");
         if (!channel) return;
 
-        channel.send(`Hello there, ${member.username}! I am RoboMiku, the bot for this server, and I would like to welcome you! :grin:\n\n Before you continue, I reccommend you check the rules in the rules channel first!\n\n See ya later! :wave:`)
+        channel.send(`Hello there, ${member}! I am RoboMiku, the bot for this server, and I would like to welcome you! :grin:\n\n Before you continue, I reccommend you check the rules in the rules channel first!\n\n See ya later! :wave:`)
     });
 
     client.on('guildMemberRemove', member => {
         const channel = member.guild.channels.find(channel => channel.name === "member-logs");
         if(!channel) return;
         
-        channel.send(`Oh.. that\'s sad. *${member.username}* left the server. :crying_cat_face:`)
+        channel.send(`Oh.. that\'s sad. *${member}*  left the server. :crying_cat_face:`)
     });
 
    client.on('message', async message => {
