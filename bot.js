@@ -54,7 +54,8 @@ var answersForHello = [
   "Greetings",
   "Welcome back",
   "Hi! Didn\'t see you there",
-  "Por qué, hola"
+  "Por qué, hola",
+  "Why hello"
 ]
    
 var answersForMew1 = [
@@ -64,6 +65,7 @@ var answersForMew1 = [
     "Oh! ",
     "*I'm lovin\' it!*  ",
     "*:open_mouth:*  Whoah! "
+    "I have no words! "
 ]
 
 var answersForMew2 = [
@@ -72,7 +74,8 @@ var answersForMew2 = [
     "*purr*",
     "Guess people can be cats too. Weird.",
     "Where\'s the dog?",
-    "Very interesting.. :thinking:"
+    "Very interesting.. :thinking:",
+    "So meow. Very cute. :sarcasticdoge:"	
 ]
 
 var answersForPing = [
@@ -81,6 +84,7 @@ var answersForPing = [
     "Oreo! ~~No, wait..~~",
     "Super combo pong!",
     "Pinger ponger!"
+    "Try asking Alexa that." + Client.sendFile(bot-testing, https://giphy.com/gifs/fairy-tail-angry-fvcrSYkOmtP8c)
 ]
     
     
