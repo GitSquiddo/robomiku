@@ -1,5 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
+const winston = require('winston');
 const logger = winston.createLogger({
 	transports: [
 		new winston.transports.Console(),
