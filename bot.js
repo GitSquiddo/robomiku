@@ -158,7 +158,7 @@ var answersForPing = [
                 break;
             case 'gif':
 		message.channel.send(`Alright, here you go!`, {
-                    file: "https://media.giphy.com/media/nervous-anxiety-12nMEydAAgCxYA/giphy.gif"
+                    file: "https://media.giphy.com/media/12nMEydAAgCxYA/giphy.gif"
                 });
 
                 
