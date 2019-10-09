@@ -1,5 +1,19 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
+const logger = winston.createLogger({
+	transports: [
+		new winston.transports.Console(),
+		new winston.transports.File({ filename: 'log' }),
+	],
+	format: winston.format.printf(log => `[${log.level.toUpperCase()}] - ${log.message}`),
+});
+
+client.on('ready', () => logger.log('info', 'RoboMiku is online, and running version ' + version + '!'));
+client.on('debug', m => logger.log('debug', 'Debug mode is activated!'));
+client.on('warn', m => logger.log('warn', 'There is an bug that if repeated might cause an error.'));
+client.on('error', m => logger.log('error', 'Uh-oh! Something bad happened, causing the bot to crash.'));
+
+process.on('uncaughtException', error => logger.log('error', error));
 
 const PREFIX = '!';
 
@@ -23,7 +37,6 @@ var version = '0.1.11a'
 const usedCommandRecently = new Set();
 
 client.on('ready', async () => {
-    console.log('RoboMiku is online, and running version ' + version + '!');
     const randomActivityDoing = activityDoing[Math.floor(Math.random() * activityDoing.length)];
     const randomActivityType = activityType[Math.floor(Math.random() * activityType.length)];
     client.user.setActivity(randomActivityDoing, {
