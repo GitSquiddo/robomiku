@@ -171,6 +171,10 @@ var gifs = [
 		message.channel.send(`Alright, here you go!`, {
                     file: randomAnswerGifs
                 });
+		break;
+	    case 'play':
+		message.channel.send('You can\'t do this right now, but don\'t worry: It\'s coming soon!');
+		break;	
 
                 
         }
