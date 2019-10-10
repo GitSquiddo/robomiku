@@ -90,7 +90,10 @@ var answersForPing = [
 var gifs = [
     "https://media.giphy.com/media/3o7btMCltyDvSgF92E/giphy.gif",
     "https://media.giphy.com/media/12nMEydAAgCxYA/giphy.gif",
-    "https://media.giphy.com/media/fvcrSYkOmtP8c/giphy.gif"
+    "https://media.giphy.com/media/fvcrSYkOmtP8c/giphy.gif",
+    "https://media.giphy.com/media/ErZ8hv5eO92JW/giphy.gif",
+    "https://media.giphy.com/media/Id0IZ49MNMzKHI9qpV/giphy.gif",
+    "https://media.giphy.com/media/a9lgeWGF7Ysrm/giphy.gif"
 ]
     
     
