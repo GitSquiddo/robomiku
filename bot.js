@@ -9,6 +9,8 @@ const logger = winston.createLogger({
 	format: winston.format.printf(log => `[${log.level.toUpperCase()}] - ${log.message}`),
 });
 
+const ytdl = require("ytdl-core");
+
 client.on('ready', () => logger.log('info', 'RoboMiku is online, and running version ' + version + '!'));
 client.on('debug', m => logger.log('debug', 'Debug mode is activated!'));
 client.on('warn', m => logger.log('warn', 'There is an bug that if repeated might cause an error.'));
@@ -17,6 +19,8 @@ client.on('error', m => logger.log('error', 'Uh-oh! Something bad happened, caus
 process.on('uncaughtException', error => logger.log('error', error));
 
 const PREFIX = '!';
+
+var servers = {};
 
 var activityDoing = [
     "you!",
@@ -94,7 +98,8 @@ var gifs = [
     "https://media.giphy.com/media/ErZ8hv5eO92JW/giphy.gif",
     "https://media.giphy.com/media/Id0IZ49MNMzKHI9qpV/giphy.gif",
     "https://media.giphy.com/media/a9lgeWGF7Ysrm/giphy.gif",
-    "https://media.giphy.com/media/zh5U2Rj6Wp3Uc/giphy.gif"
+    "https://media.giphy.com/media/zh5U2Rj6Wp3Uc/giphy.gif",
+    "https://media.giphy.com/media/N4AIdLd0D2A9y/giphy.gif"
 ]
     
     
@@ -173,7 +178,46 @@ var gifs = [
                 });
 		break;
 	    case 'play':
-		message.channel.send('You can\'t do this right now, but don\'t worry: It\'s coming soon!');
+		 
+		 function play(connection, message){
+			 var server = servers[message.guild.id];
+			 
+			 server.dispatcher = connection.playStream(ytdl(server.queue[0], {filter: "audioonly"}));
+			 
+			 server.queue.shift();
+			 
+			 server.dispatcher.on("end", function(){
+			     if(server.queue[0]){
+				  play(connection, message);
+			     }else {
+				  connection.disconnect();
+			     }
+			 });
+			 
+			 
+		 }
+		
+		 if(!args[1]){
+			 message.channel.send('Sorry, I can\'t read your mind! Please give me a link to a song to play! :negative_squared_cross_mark:');
+			 return;
+		 }
+			
+		 if(!message.member.voiceChannel){
+		     message.channel.send('I can\'t play the song if you aren\'t in the voice channel! Join, then try again. :negative_squared_cross_mark:');
+		     return;
+		 }
+			
+		 if(!servers[message.guild.id]) servers[message.guild.id] = {
+		     queue: []
+		 }
+			
+		 var server = servers[message.guild.id];
+			
+		 server.queue.push(args[1]);
+			
+		 if(!message.guild.voiceConnection) message.member.voiceChannel.join().then(function(connection){
+		     play(connection, message);
+		 })
 		break;	
 
                 
