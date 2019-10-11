@@ -57,7 +57,8 @@ var answersForHello = [
   "Welcome back",
   "Hi! Didn\'t see you there",
   "Por qué, hola",
-  "Why hello"
+  "Why hello",
+  "Hi there"
 ]
    
 var answersForMew1 = [
@@ -67,7 +68,8 @@ var answersForMew1 = [
     "Oh! ",
     "*I'm lovin\' it!*  ",
     "*:open_mouth:*  Whoah! ",
-    "I have no words! "
+    "I have no words! ",
+    "That\'s nice. "
 ]
 
 var answersForMew2 = [
@@ -77,7 +79,8 @@ var answersForMew2 = [
     "Guess people can be cats too. Weird.",
     "Where\'s the dog?",
     "Very interesting.. :thinking:",
-    "So meow. Very cute. :dog:"	
+    "So meow. Very cute. :dog:",
+    "~~Can I go stabby someone?~~"
 ]
 
 var answersForPing = [
@@ -86,7 +89,8 @@ var answersForPing = [
     "Oreo! ~~No, wait..~~",
     "Super combo pong!",
     "Pinger ponger!",
-    "https://media.giphy.com/media/fvcrSYkOmtP8c/giphy.gif"
+    "https://media.giphy.com/media/fvcrSYkOmtP8c/giphy.gif",
+    "ERROR: PING IS NOT A COMMAND, SICKO"
 ]
 
 var gifs = [
@@ -97,7 +101,8 @@ var gifs = [
     "https://media.giphy.com/media/Id0IZ49MNMzKHI9qpV/giphy.gif",
     "https://media.giphy.com/media/a9lgeWGF7Ysrm/giphy.gif",
     "https://media.giphy.com/media/zh5U2Rj6Wp3Uc/giphy.gif",
-    "https://media.giphy.com/media/N4AIdLd0D2A9y/giphy.gif"
+    "https://media.giphy.com/media/N4AIdLd0D2A9y/giphy.gif",
+    "https://media.giphy.com/media/LU3uRsnett7gs/giphy.gif"
 ]
     
     
