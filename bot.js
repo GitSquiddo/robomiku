@@ -10,7 +10,7 @@ const logger = winston.createLogger({
 });
 
 const ytdl = require("ytdl-core");
-const Ffmpeg = require("Ffmpeg");
+const Ffmpeg = require("ffmpeg");
 
 client.on('ready', () => logger.log('info', 'RoboMiku is online, and running version ' + version + '!'));
 client.on('debug', m => logger.log('debug', 'Debug mode is activated!'));
