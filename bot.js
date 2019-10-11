@@ -154,7 +154,7 @@ var gifs = [
             case 'profile':
                 const embed = new Discord.RichEmbed()
                     .setTitle('__' + message.author.username + '\'s Profile__')
-                    .addField('I wonder if I can change this..')
+                    .addField('Bio: ', 'I wonder if I can change this..')
 		    .addField('Current Server', message.guild.name, true)
                     .setColor(0x277ECD)
                     .setThumbnail(message.author.avatarURL)
