@@ -154,11 +154,10 @@ var gifs = [
             case 'profile':
                 const embed = new Discord.RichEmbed()
                     .setTitle('__' + message.author.username + '\'s Profile__')
-                    .addField('Version', version, true)
-                    .addField('Current Server', message.guild.name, true)
+                    .addField('I wonder if I can change this..')
+		    .addField('Current Server', message.guild.name, true)
                     .setColor(0x277ECD)
                     .setThumbnail(message.author.avatarURL)
-                    .setFooter('I\'m totally not a robot!')
                 message.channel.sendEmbed(embed);
                 break;
             case 'mew':
