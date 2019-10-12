@@ -79,7 +79,7 @@ var answersForMew2 = [
     "Guess people can be cats too. Weird.",
     "Where\'s the dog?",
     "Very interesting.. :thinking:",
-    "So meow. Very cute. :dog:",
+    "So meow. Very cute. 632714778921402379",
     "~~Can I go stabby someone?~~"
 ]
 
