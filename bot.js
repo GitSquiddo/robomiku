@@ -35,7 +35,7 @@ var activityType = [
     "LISTENING"
 ]
 
-var version = '0.1.11a'
+var version = '0.1.12a'
 
 const usedCommandRecently = new Set();
 
@@ -129,13 +129,13 @@ var gifs = [
         switch (args[0]) {
             case 'ping':
                 const randomAnswerPing = answersForPing[Math.floor(Math.random() * answersForPing.length)];
-                message.channel.sendMessage(randomAnswerPing)
+                message.channel.send(randomAnswerPing)
                 break;
             case 'info':
                 if (args[1] === 'version') {
-                    message.channel.sendMessage('The current version is ' + version + '. ' + 'Keep your eyes peeled for updates!')
+                    message.channel.send('The current version is ' + version + '. ' + 'Keep your eyes peeled for updates!')
                 } else {
-                    message.channel.sendMessage('Sorry, that\'s not a valid command! Try again. :thumbsdown:')
+                    message.channel.send('Sorry, that\'s not a valid command! Try again. :thumbsdown:')
                         .then(msg => msg.delete(5000));
                 }
                 break;
