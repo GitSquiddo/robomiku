@@ -20,6 +20,8 @@ const PREFIX = '!';
 
 var servers = {};
 
+const sarcasticdoge = client.emojis.find(emoji => emoji.name === "sarcasticdoge");
+
 var activityDoing = [
     "you!",
     "Attack on Titans",
@@ -79,7 +81,7 @@ var answersForMew2 = [
     "Guess people can be cats too. Weird.",
     "Where\'s the dog?",
     "Very interesting.. :thinking:",
-    "So meow. Very cute. :632714778921402379:",
+    "So meow. Very cute. " + sarcasticdoge",
     "~~Can I go stabby someone?~~"
 ]
 
