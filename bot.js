@@ -168,6 +168,10 @@ var gifs = [
                 if (!message.mentions.users.size) {
                 return message.reply('I need to know who you want to mew at!')
                     .then(msg => msg.delete(5000));
+		}
+		if (!member.user.bot) {
+		return message.reply('Uh.. you can\'t mew at a bot. Sowwy.')
+		    .then(msg => msg.delete(5000));
                 }
                 break;
             case 'weebs':
