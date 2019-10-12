@@ -153,12 +153,10 @@ var gifs = [
                 break;
             case 'profile':
                 const embed = new Discord.RichEmbed()
-                let color = message.member.displayHexColor;
-                if (color == '#000000') color = message.member.hoistRole.hexColor
 		    .setTitle('__' + message.author.username + '\'s Profile__')
                     .addField('Bio: ', 'I wonder if I can change this..')
 		    .addField('Current Server', message.guild.name, true)
-                    .setColor(color)
+                    .setColor(message.member.colorRole.color)
                     .setThumbnail(message.author.avatarURL)
                 message.channel.sendEmbed(embed);
                 break;
