@@ -190,9 +190,9 @@ var gifs = [
 		break;
 	    case 'load':	
 		message.channel.send('Loading something...')
-		wait(2000)
+		.then(wait(2000))
 		message.replace('Loading dumb videos...')
-		wait(2000)
+		.then (wait(2000))
 		message.replace('Sorry, can\'t load anything.');
 		break;
 
