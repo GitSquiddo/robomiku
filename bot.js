@@ -162,8 +162,7 @@ var gifs = [
             case 'profile':
                 const embed = new Discord.RichEmbed()
 		    .setTitle('__' + message.author.username + '\'s Profile__')
-                    .addField('Bio: ', (Descriptions[message.author.id] || 'Huh. Nothing here.'))
-		    .addField('Current Server', message.guild.name, true)
+                    .addField('Bio', 'Huh. Nothing here.')
                     .setColor(message.member.colorRole.color)
                     .setThumbnail(message.author.avatarURL)
                 message.channel.sendEmbed(embed);
