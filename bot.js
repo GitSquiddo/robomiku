@@ -91,7 +91,8 @@ var answersForPing = [
     "Super combo pong!",
     "Pinger ponger!",
     "https://media.giphy.com/media/fvcrSYkOmtP8c/giphy.gif",
-    "ERROR: PING IS NOT A COMMAND, SICKO"
+    "ERROR: PING IS NOT A COMMAND, SICKO",
+    "File \'pong.exe\' downloaded."
 ]
 
 var gifs = [
@@ -104,7 +105,9 @@ var gifs = [
     "https://media.giphy.com/media/zh5U2Rj6Wp3Uc/giphy.gif",
     "https://media.giphy.com/media/N4AIdLd0D2A9y/giphy.gif",
     "https://media.giphy.com/media/LU3uRsnett7gs/giphy.gif",
-    "https://media.giphy.com/media/gZBYbXHtVcYKs/giphy.gif"
+    "https://media.giphy.com/media/gZBYbXHtVcYKs/giphy.gif",
+    "https://media.giphy.com/media/4QxQgWZHbeYwM/giphy.gif",
+    "https://media.giphy.com/media/f4V2mqvv0wT9m/giphy.gif"
 ]
     
     
