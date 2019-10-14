@@ -20,6 +20,9 @@ const PREFIX = '!';
 
 var servers = {};
 
+var Descriptions = {};
+
+Descriptions[message.author.id] = 'some string here';
 
 var activityDoing = [
     "you!",
@@ -159,7 +162,7 @@ var gifs = [
             case 'profile':
                 const embed = new Discord.RichEmbed()
 		    .setTitle('__' + message.author.username + '\'s Profile__')
-                    .addField('Bio: ', 'I wonder if I can change this..')
+                    .addField('Bio: ', (Descriptions[message.author.id] || 'Huh. Nothing here.');)
 		    .addField('Current Server', message.guild.name, true)
                     .setColor(message.member.colorRole.color)
                     .setThumbnail(message.author.avatarURL)
