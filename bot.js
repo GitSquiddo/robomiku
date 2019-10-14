@@ -188,6 +188,11 @@ var gifs = [
                     file: randomAnswerGifs
                 });
 		break;
+	    case 'load':	
+		message.channel.send('Loading something...')
+		wait(3000)
+		message.replace('Loading something', 'Loading dumb videos...');
+		break;
 
 
                 
