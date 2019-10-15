@@ -196,7 +196,7 @@ var bio = {};
                     .addField('Bio: ', bio[message.author.id] || 'Huh. They don\'t have a bio.')
 		    .setColor(message.member.colorRole.color)
                     .setThumbnail(message.author.avatarURL)
-                message.channel.sendEmbed(embed);
+                message.channel.send(embed);
                 break;
         }
 
