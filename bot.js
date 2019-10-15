@@ -20,9 +20,6 @@ const PREFIX = '!';
 
 var servers = {};
 
-var Descriptions = {};
-
-Descriptions[message.author.id] = 'some string here';
 
 var activityDoing = [
     "you!",
