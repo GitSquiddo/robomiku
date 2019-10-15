@@ -195,10 +195,10 @@ var gifs = [
             case 'profile':
                 const embed = new Discord.RichEmbed()
 		    .setTitle('__' + message.author.username + '\'s Profile__')
-                    .addField('Bio: ', bio[message.author.id] || 'Huh. They don\'t have a bio.')
                     .setColor(message.member.colorRole.color)
                     .setThumbnail(message.author.avatarURL)
-                message.channel.sendEmbed(embed);
+                message.channel.sendEmbed(embed);                    .addField('Bio: ', bio[message.author.id] || 'Huh. They don\'t have a bio.')
+
                 break;
         }
 
