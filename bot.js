@@ -162,7 +162,7 @@ var gifs = [
             case 'profile':
                 const embed = new Discord.RichEmbed()
 		    .setTitle('__' + message.author.username + '\'s Profile__')
-                    .addField('Bio: ', desc[message.author.id] || 'Huh. They don\'t have a bio.')
+                    .addField('Bio: ', 'Huh. They don\'t have a bio. Probably cause they can\'t change it.')
                     .setColor(message.member.colorRole.color)
                     .setThumbnail(message.author.avatarURL)
                 message.channel.sendEmbed(embed);
@@ -197,13 +197,6 @@ var gifs = [
 		.then (wait(2000))
 		message.replace('Sorry, can\'t load anything.');
 		break;
-	    case 'setBio':
-		var bio = {};
-		bio[message.author.id] = text;
-		message.channel.send('Your bio has been changed!')
-		.then(msg => msg.delete(5000));
-		break;
-
 
                 
         }
