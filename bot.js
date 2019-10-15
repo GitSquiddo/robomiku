@@ -188,17 +188,17 @@ var gifs = [
 		break;
             case 'setBio':
 		var bio = {};
-		bio[message.author.id] = text;
+		bio[message.author.id] = args[1];
 		message.channel.send('Your bio has been changed!')
 	        .then(msg => msg.delete(5000)); 
 		break;
             case 'profile':
                 const embed = new Discord.RichEmbed()
 		    .setTitle('__' + message.author.username + '\'s Profile__')
-                    .setColor(message.member.colorRole.color)
+                    .addField('Bio: ', bio[message.author.id] || 'Huh. They don\'t have a bio.')
+		    .setColor(message.member.colorRole.color)
                     .setThumbnail(message.author.avatarURL)
-                message.channel.sendEmbed(embed);                    .addField('Bio: ', bio[message.author.id] || 'Huh. They don\'t have a bio.')
-
+                message.channel.sendEmbed(embed);
                 break;
         }
 
