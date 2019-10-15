@@ -188,12 +188,12 @@ var bio = {};
             case 'setBio':
 		bio[message.author.id] = args[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
 		message.channel.send('Your bio has been changed!')
-	        .then(msg => msg.delete(5000)); 
+	        .then(msg => msg.delete(3000)); 
 		break;
             case 'profile':
                 const embed = new Discord.RichEmbed()
 		    .setTitle('__' + message.author.username + '\'s Profile__')
-                    .addField('Bio: ', bio[message.author.id] || 'Huh. They don\'t have a bio.')
+                    .addField('Bio: ', bio[message.author.id])
 		    .setColor(message.member.colorRole.color)
                     .setThumbnail(message.author.avatarURL)
                 message.channel.send(embed);
