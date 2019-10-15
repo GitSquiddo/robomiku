@@ -200,13 +200,8 @@ var gifs = [
 	    case 'setBio':
 		var bio = {};
 		bio[message.author.id] = text;
-		var string_length = message.length;
 		message.channel.send('Your bio has been changed!')
 		.then(msg => msg.delete(5000));
-		
-		if(string_length > 50) return;
-		message.channel.send('Sorry, your bio is too long!')
-                .then(msg => msg.delete(5000));		
 		break;
 
 
