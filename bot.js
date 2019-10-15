@@ -109,8 +109,6 @@ var gifs = [
     "https://media.giphy.com/media/f4V2mqvv0wT9m/giphy.gif"
 ]
 
-var bio = {};
-
     client.on('guildMemberAdd', member => {
 
         const channel = member.guild.channels.find(channel => channel.name === "member-logs");
@@ -186,7 +184,8 @@ var bio = {};
 		message.replace('Sorry, can\'t load anything.');
 		break;
             case 'setBio':
-		bio[message.author.id] = args[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];
+		var bio = {};
+		bio[message.author.id] = args[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
 		message.channel.send('Your bio has been changed!')
 	        .then(msg => msg.delete(5000)); 
 		break;
