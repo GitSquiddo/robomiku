@@ -156,14 +156,6 @@ var gifs = [
                 const randomAnswerHello = answersForHello[Math.floor(Math.random() * answersForHello.length)];
                 message.channel.send(randomAnswerHello + ', ' + message.author.username + '!')
                 break;
-            case 'profile':
-                const embed = new Discord.RichEmbed()
-		    .setTitle('__' + message.author.username + '\'s Profile__')
-                    .addField('Bio: ', bio[message.author.id] || 'Huh. They don\'t have a bio.')
-                    .setColor(message.member.colorRole.color)
-                    .setThumbnail(message.author.avatarURL)
-                message.channel.sendEmbed(embed);
-                break;
             case 'mew':
                 const pingedUser = message.mentions.users.first();
                 const randomAnswerMew1 = answersForMew1[Math.floor(Math.random() * answersForMew1.length)];
@@ -200,7 +192,14 @@ var gifs = [
 		message.channel.send('Your bio has been changed!')
 	        .then(msg => msg.delete(5000)); 
 		break;
-                
+            case 'profile':
+                const embed = new Discord.RichEmbed()
+		    .setTitle('__' + message.author.username + '\'s Profile__')
+                    .addField('Bio: ', bio[message.author.id] || 'Huh. They don\'t have a bio.')
+                    .setColor(message.member.colorRole.color)
+                    .setThumbnail(message.author.avatarURL)
+                message.channel.sendEmbed(embed);
+                break;
         }
 
     });
