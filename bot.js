@@ -109,7 +109,7 @@ var gifs = [
     "https://media.giphy.com/media/f4V2mqvv0wT9m/giphy.gif"
 ]
 
-    
+var bio = {};
 
     client.on('guildMemberAdd', member => {
 
@@ -129,8 +129,7 @@ var gifs = [
    client.on('message', async message => {
 
         let args = message.content.substring(PREFIX.length).split(" ");
-
-
+	   
         switch (args[0]) {
             case 'ping':
                 const randomAnswerPing = answersForPing[Math.floor(Math.random() * answersForPing.length)];
@@ -187,7 +186,6 @@ var gifs = [
 		message.replace('Sorry, can\'t load anything.');
 		break;
             case 'setBio':
-		var bio = {};
 		bio[message.author.id] = args[1];
 		message.channel.send('Your bio has been changed!')
 	        .then(msg => msg.delete(5000)); 
