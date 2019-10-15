@@ -87,8 +87,7 @@ var answersForMew2 = [
     "~~Can I go stabby someone?~~"
 ]
 
-var answersForPing = [
-    "Pong!",
+var answersForPing = [    "Pong!",
     "Pingity pong!",
     "Oreo! ~~No, wait..~~",
     "Super combo pong!",
@@ -112,6 +111,8 @@ var gifs = [
     "https://media.giphy.com/media/4QxQgWZHbeYwM/giphy.gif",
     "https://media.giphy.com/media/f4V2mqvv0wT9m/giphy.gif"
 ]
+
+var bio = {};
     
     
 
@@ -133,6 +134,8 @@ var gifs = [
    client.on('message', async message => {
 
         let args = message.content.substring(PREFIX.length).split(" ");
+	
+        bio[message.author.id] = text;
 
         switch (args[0]) {
             case 'ping':
@@ -162,7 +165,7 @@ var gifs = [
             case 'profile':
                 const embed = new Discord.RichEmbed()
 		    .setTitle('__' + message.author.username + '\'s Profile__')
-                    .addField('Bio', 'Huh. Nothing here.')
+                    .addField('Bio: ', desc[message.author.id])
                     .setColor(message.member.colorRole.color)
                     .setThumbnail(message.author.avatarURL)
                 message.channel.sendEmbed(embed);
