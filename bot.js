@@ -194,7 +194,12 @@ var gifs = [
 		.then (wait(2000))
 		message.replace('Sorry, can\'t load anything.');
 		break;
-
+            case 'setBio':
+		var bio = {};
+		bio[message.author.id] = text;
+		message.channel.send('Your bio has been changed!')
+	        .then(msg => msg.delete(5000)); 
+		break;
                 
         }
 
