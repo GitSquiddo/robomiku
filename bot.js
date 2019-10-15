@@ -112,8 +112,6 @@ var gifs = [
     "https://media.giphy.com/media/f4V2mqvv0wT9m/giphy.gif"
 ]
 
-var bio = {};
-    
     
 
     client.on('guildMemberAdd', member => {
@@ -134,8 +132,7 @@ var bio = {};
    client.on('message', async message => {
 
         let args = message.content.substring(PREFIX.length).split(" ");
-	
-        bio[message.author.id] = text;
+
 
         switch (args[0]) {
             case 'ping':
@@ -165,7 +162,7 @@ var bio = {};
             case 'profile':
                 const embed = new Discord.RichEmbed()
 		    .setTitle('__' + message.author.username + '\'s Profile__')
-                    .addField('Bio: ', desc[message.author.id])
+                    .addField('Bio: ', desc[message.author.id] || 'Huh. They don\'t have a bio.')
                     .setColor(message.member.colorRole.color)
                     .setThumbnail(message.author.avatarURL)
                 message.channel.sendEmbed(embed);
@@ -179,7 +176,7 @@ var bio = {};
                 return message.reply('I need to know who you want to mew at!')
                     .then(msg => msg.delete(5000));
 		}
-		if (!member.user.bot) {
+		if (member.user.bot) {
 		return message.reply('Uh.. you can\'t mew at a bot. Sowwy.')
 		    .then(msg => msg.delete(5000));
                 }
@@ -199,6 +196,17 @@ var bio = {};
 		message.replace('Loading dumb videos...')
 		.then (wait(2000))
 		message.replace('Sorry, can\'t load anything.');
+		break;
+	    case 'setBio':
+		var bio = {};
+		bio[message.author.id] = text;
+		var string_length = message.length;
+		message.channel.send('Your bio has been changed!')
+		.then(msg => msg.delete(5000));
+		
+		if(string_length > 50) return;
+		message.channel.send('Sorry, your bio is too long!')
+                .then(msg => msg.delete(5000));		
 		break;
 
 
