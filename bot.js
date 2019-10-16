@@ -165,10 +165,6 @@ var bio = {};
                 return message.reply('I need to know who you want to mew at!')
                     .then(msg => msg.delete(5000));
 		}
-		if (member.user.bot) {
-		return message.reply('Uh.. you can\'t mew at a bot. Sowwy.')
-		    .then(msg => msg.delete(5000));
-                }
                 break;
             case 'weebs':
                 message.channel.send('Oh, so you want this? https://m.youtube.com/watch?v=S5RRCyCkiCk');
@@ -178,13 +174,6 @@ var bio = {};
 		message.channel.send(`Alright, here you go!`, {
                     file: randomAnswerGifs
                 });
-		break;
-	    case 'load':	
-		message.channel.send('Loading something...')
-		.then(wait(2000))
-		message.replace('Loading dumb videos...')
-		.then (wait(2000))
-		message.replace('Sorry, can\'t load anything.');
 		break;
             case 'setBio':
 		let newArr = args.slice(1)
@@ -197,7 +186,7 @@ var bio = {};
 		    .setTitle('__' + message.author.username + '\'s Profile__')
 		    .setColor(message.member.colorRole.color)
                     .setThumbnail(message.author.avatarURL)
-                    .addField('Bio: ', bio[message.author.id].join(" ") || 'Huh. They don\'t have a bio set.')
+                    .addField('Bio: ', bio[message.author.id].join(" ")) || 'Huh. No bio here.')
                     message.channel.send(embed);
                 break;
         }
