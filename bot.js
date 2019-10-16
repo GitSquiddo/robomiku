@@ -186,7 +186,7 @@ var bio = {};
 		    .setTitle('__' + message.author.username + '\'s Profile__')
 		    .setColor(message.member.colorRole.color)
                     .setThumbnail(message.author.avatarURL)
-                    .addField('Bio: ', bio[message.author.id].join(" ")).catch(console.error);
+                    .addField('Bio: ', bio[message.author.id].join(" "))
                     message.channel.send(embed);
                 break;
         }
