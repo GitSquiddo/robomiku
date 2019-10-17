@@ -187,7 +187,7 @@ var bio = {};
 		} else {
 		const embed = new Discord.RichEmbed()
 		    .setTitle('__' + message.author.username + '\'s Profile__')
-		    .addField('Bio:', bio[message.author.id].join(" ")).catch(client.error)
+		    .addField('Bio:', bio[message.author.id].join(" "))
 		    .setColor(message.member.colorRole.color)
                     .setThumbnail(message.author.avatarURL)
                     message.channel.send(embed);
