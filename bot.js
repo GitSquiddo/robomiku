@@ -182,12 +182,12 @@ var bio = {};
 	        .then(msg => msg.delete(3000)); 
 		break;
             case 'profile':
-                if(!bio[message.author.id] === '') {
+                if(!bio[message.author.id]) {
 		return message.channel.send('Sorry, please set a bio with `!setBio` to view your profile!')
 		} else {
 		const embed = new Discord.RichEmbed()
 		    .setTitle('__' + message.author.username + '\'s Profile__')
-		    .addField('Bio:', bio[message.author.id].join(" "))
+		    .addField('Bio:', bio[message.author.id].join(" ")).catch(client.error)
 		    .setColor(message.member.colorRole.color)
                     .setThumbnail(message.author.avatarURL)
                     message.channel.send(embed);
