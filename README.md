@@ -12,8 +12,9 @@ All commands simply use ! as the prefix, without anything extra.
 | hello | RoboMiku says hello to you! ~~What, too simple?~~ |
 | clear | Clears the given number of messages. *Only those with a special role can use this.* |
 | profile | Shows a small profile with your username and Bio. |
-| setBio (W.I.P) | Changes your profile's Bio to your given answer. |
+| setBio (Beta) | Changes your profile's Bio to your given answer. |
 | mew | Mew at the given user. Just make sure it isn't a bot! |
+| gif | Gives a random GIF to the user. ~~All GIFs used are from Giphy!~~ |
 
 **More to come soon!**
 
