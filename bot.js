@@ -36,7 +36,7 @@ var activityType = [
     "LISTENING"
 ]
 
-var version = '0.1.12a'
+var version = '0.1.2a'
 
 const usedCommandRecently = new Set();
 
@@ -59,7 +59,8 @@ var answersForHello = [
   "Hi! Didn\'t see you there",
   "Por qué, hola",
   "Why hello",
-  "Hi there"
+  "Hi there",
+  "yWhay ellohay"
 ]
    
 var answersForMew1 = [
