@@ -20,6 +20,8 @@ const PREFIX = '!';
 
 var servers = {};
 
+const doge = client.emojis.get(sarcasticdoge)
+
 
 var activityDoing = [
     "you!",
@@ -81,11 +83,12 @@ var answersForMew2 = [
     "Guess people can be cats too. Weird.",
     "Where\'s the dog?",
     "Very interesting.. :thinking:",
-    "So meow. Very cute. \:sarcasticdoge:",
+    "So meow. Very cute." + doge + "",
     "~~Can I go stabby someone?~~"
 ]
 
-var answersForPing = [    "Pong!",
+var answersForPing = [    
+    "Pong!",
     "Pingity pong!",
     "Oreo! ~~No, wait..~~",
     "Super combo pong!",
