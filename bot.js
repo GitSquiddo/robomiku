@@ -123,14 +123,14 @@ var bio = {};
 
     client.on('guildMemberAdd', member => {
 
-        const channel = member.guild.channels.find(channel => channel.name === "member-logs");
+        const channel = member.guild.channels.find(channel => channel.name === "talk");
         if (!channel) return;
 
         channel.send(`Hello there, ${member}! I am RoboMiku, the bot for this server, and I would like to welcome you! :grin:\n\n Before you continue, I reccommend you check the rules in the rules channel first!\n\n See ya later! :wave:`)
     });
 
     client.on('guildMemberRemove', member => {
-        const channel = member.guild.channels.find(channel => channel.name === "member-logs");
+        const channel = member.guild.channels.find(channel => channel.name === "talk");
         if(!channel) return;
         
         channel.send(`Oh.. that\'s sad. *${member}*  left the server. :crying_cat_face:`)
@@ -156,7 +156,7 @@ var bio = {};
             case 'clear':
                 if (!args[1]) return message.reply('Oops! You didn\'t define how many you wanted to clear, so I couldn\'t do anything! :worried: Please try again.')
                     .then(msg => msg.delete(5000));
-                if(!message.member.roles.find(r => r.name === "RoboMiku's Creator")) return;
+                if(!message.member.roles.find(r => r.name === "god")) return;
                 message.channel.send('Sorry, I can\'t let you clear any messages because you do not have the needed roles!')
                     .then(msg => msg.delete(5000));
                 message.channel.bulkDelete(args[1]);
