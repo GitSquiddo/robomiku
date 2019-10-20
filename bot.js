@@ -156,11 +156,18 @@ var bio = {};
                 break;
             case 'clear':
                 if (!args[1]) return message.reply('Oops! You didn\'t define how many you wanted to clear, so I couldn\'t do anything! :worried: Please try again.')
-                    .then(msg => msg.delete(5000));
+                .then(msg => msg.delete(5000));
                 if(!message.member.roles.find(r => r.name === "RoboMiku\'s Creator")) return;
                 message.channel.send('Sorry, I can\'t let you clear any messages because you do not have the needed roles!')
-                    .then(msg => msg.delete(5000));
+                .then(msg => msg.delete(5000));
                 message.channel.bulkDelete(args[1]);
+		if(args[1] === '1') {
+		message.channel.send('1 message deleted.')
+		.then(msg => msg.delete(5000));
+		} else {
+		message.channel.send(`${args[1]} messages deleted.`)
+		.then(msg => msg.delete(5000));
+		}
                 break;
             case 'hello':
                 const randomAnswerHello = answersForHello[Math.floor(Math.random() * answersForHello.length)];
@@ -173,7 +180,7 @@ var bio = {};
                 message.channel.send(randomAnswerMew1 + message.author.username + ` mewed at ${pingedUser.username}! ` + randomAnswerMew2)
                 if (!message.mentions.users.size) {
                 return message.reply('I need to know who you want to mew at!')
-                    .then(msg => msg.delete(5000));
+                .then(msg => msg.delete(5000));
 		}
                 break;
             case 'weebs':
@@ -194,6 +201,7 @@ var bio = {};
             case 'profile':
                 if(!bio[message.author.id]) {
 		return message.channel.send('Sorry, please set a bio with `!setBio` to view your profile!')
+		.then(msg => msg.delete(3000)); 
 		} else {
 		const embed = new Discord.RichEmbed()
 		    .setTitle('__' + message.author.username + '\'s Profile__')
