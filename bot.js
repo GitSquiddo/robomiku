@@ -110,6 +110,11 @@ var gifs = [
     "https://media.giphy.com/media/f4V2mqvv0wT9m/giphy.gif"
 ]
 
+var answersForFacts = [
+    "According to all known laws of aviation, there is no way a bee should be able to fly.",
+    "The software that created me was released on August 31, 2007. ~~Wait, maybe a shouldn\'t have said that...~~"
+]
+
 var bio = {};
 
 
@@ -194,6 +199,10 @@ var bio = {};
                     message.channel.send(embed);
 		}
                 break;
+	    case 'fact':
+		const randomAnswerFacts = answersForFacts[Math.floor(Math.random() * answersForFacts.length)];
+		message.channel.send('Alright, here\'s a random fact: ' + randomAnswerFacts);
+		break;
         }
 
     });
