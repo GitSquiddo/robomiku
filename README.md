@@ -25,4 +25,4 @@ RoboMiku is still in a very early alpha, so please *don't insult her!* I try to 
 ____________
 
 
-<span style=“color:light-grey;”> README Version 0.0.4 </span>
+<span style=“color:grey;”> README Version 0.0.4</span>
