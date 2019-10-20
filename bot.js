@@ -20,7 +20,7 @@ const PREFIX = '!';
 
 var servers = {};
 
-const doge = client.emojis.get("635569327256502292")
+const doge = client.emojis.get(635569327256502292)
 
 
 var activityDoing = [
@@ -83,7 +83,7 @@ var answersForMew2 = [
     "Guess people can be cats too. Weird.",
     "Where\'s the dog?",
     "Very interesting.. :thinking:",
-    "So meow. Very cute." + doge + "",
+    "So meow. Very cute. " + doge + "",
     "~~Can I go stabby someone?~~"
 ]
 
