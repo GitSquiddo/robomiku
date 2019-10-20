@@ -20,7 +20,7 @@ const PREFIX = '!';
 
 var servers = {};
 
-const doge = client.emojis.get(635569327256502292)
+const doge = client.emojis.get("635569327256502292");
 
 
 var activityDoing = [
