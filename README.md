@@ -15,6 +15,7 @@ All commands simply use ! as the prefix, without anything extra.
 | setBio (Beta) | Changes your profile's Bio to your given answer. |
 | mew | Mew at the given user. Just make sure it isn't a bot! |
 | gif | Gives a random GIF to the user. ~~All GIFs used are from Giphy!~~ |
+| fact | Get some (probably) useless facts. |
 
 **More to come soon!**
 
@@ -24,4 +25,4 @@ RoboMiku is still in a very early alpha, so please *don't insult her!* I try to 
 
 ____________
 
-> README Version 0.0.4
+> README Version 0.0.5
