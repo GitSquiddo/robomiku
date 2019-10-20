@@ -114,7 +114,8 @@ var answersForFacts = [
     "According to all known laws of aviation, there is no way a bee should be able to fly.",
     "The software that created me was released on August 31, 2007. ~~Wait, maybe I shouldn\'t have said that...~~",
     "God is in heaven. Wait, *hey, who requested this fact? Tasty? ~~Of course...~~*",
-    "By 2020, waifus will take over the world. ~~Shoot, the boss will be mad!~~"
+    "By 2020, waifus will take over the world. ~~Shoot, the boss will be mad!~~",
+    "My name means 'The First Sound From The Future'."
 ]
 
 var bio = {};
