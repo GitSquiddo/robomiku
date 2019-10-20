@@ -2,7 +2,7 @@
 
 ### Say hello to RoboMiku.
 
-She is a new bot currently being created for disclosed reasons, if I can think up some.
+She is a new bot that is being made in JavaScript using the [Discord.js](https://discordjs.org/) addon.
 
 All commands simply use ! as the prefix, without anything extra.
 
@@ -21,3 +21,8 @@ All commands simply use ! as the prefix, without anything extra.
 RoboMiku is still in a very early alpha, so please *don't insult her!* I try to make her better whenever I can.
 
 ~~Who needs school? *Psh.*~~
+
+____________
+
+
+<span style=“color:light-grey;”> README Version 0.0.4 </span>
