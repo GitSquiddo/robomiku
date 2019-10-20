@@ -112,7 +112,8 @@ var gifs = [
 
 var answersForFacts = [
     "According to all known laws of aviation, there is no way a bee should be able to fly.",
-    "The software that created me was released on August 31, 2007. ~~Wait, maybe a shouldn\'t have said that...~~"
+    "The software that created me was released on August 31, 2007. ~~Wait, maybe a shouldn\'t have said that...~~",
+    "God is in heaven. Wait, *hey, who requested this fact? Tasty? ~~Of course...~~*"
 ]
 
 var bio = {};
