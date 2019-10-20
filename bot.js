@@ -9,7 +9,7 @@ const logger = winston.createLogger({
 	format: winston.format.printf(log => `[${log.level.toUpperCase()}] - ${log.message}`),
 });
 
-client.on('ready', () => logger.log('info', 'RoboMiku is online, and running version ' + version + '!'));
+client.on('ready', () => logger.log('ready', 'RoboMiku is online, and running version ' + version + '!'));
 client.on('debug', m => logger.log('debug', 'Debug mode is activated!'));
 client.on('warn', m => logger.log('warn', 'There is an bug that if repeated might cause an error.'));
 client.on('error', m => logger.log('error', 'Uh-oh! Something bad happened, causing the bot to crash.'));
@@ -116,7 +116,8 @@ var answersForFacts = [
     "The software that created me was released on August 31, 2007. ~~Wait, maybe I shouldn\'t have said that...~~",
     "God is in heaven. Wait, *hey, who requested this fact? Tasty? ~~Of course...~~*",
     "By 2020, waifus will take over the world. ~~Shoot, the boss will be mad!~~",
-    "My name means 'The First Sound From The Future'."
+    "My name means 'The First Sound From The Future'.",
+    "Helper Pupper created this version of me.. I don\'t know how I can feel emotion whilst being an empty husk sworn to do the things people say. *I just can\'t understand..*"
 ]
 
 var bio = {};
