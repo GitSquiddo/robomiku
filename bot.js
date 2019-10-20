@@ -138,7 +138,7 @@ var bio = {};
         const channel = member.guild.channels.find(channel => channel.name === "member-logs");
         if(!channel) return;
         
-        channel.send(`Oh.. that\'s sad. *${member}*  left the server. :crying_cat_face:`)
+        channel.send(`Oh.. that\'s sad. ${member}  left the server. :crying_cat_face:`)
     });
 
    client.on('message', async message => {
@@ -167,10 +167,10 @@ var bio = {};
                 message.channel.bulkDelete(args[1]);
 		if(args[1] === '1') {
 		message.channel.send('1 message deleted.')
-		.then(msg => msg.delete(5000));
+		.then(msg => msg.delete(3000));
 		} else {
 		message.channel.send(`${args[1]} messages deleted.`)
-		.then(msg => msg.delete(5000));
+		.then(msg => msg.delete(3000));
 		}
                 break;
             case 'hello':
@@ -184,7 +184,7 @@ var bio = {};
                 message.channel.send(randomAnswerMew1 + message.author.username + ` mewed at ${pingedUser.username}! ` + randomAnswerMew2)
                 if (!message.mentions.users.size) {
                 return message.reply('I need to know who you want to mew at!')
-                .then(msg => msg.delete(5000));
+                .then(msg => msg.delete(4000));
 		}
                 break;
             case 'weebs':
