@@ -117,7 +117,8 @@ var answersForFacts = [
     "God is in heaven. Wait, *hey, who requested this fact? Tasty? ~~Of course...~~*",
     "By 2020, waifus will take over the world. ~~Shoot, the boss will be mad!~~",
     "My name means 'The First Sound From The Future'.",
-    "Helper Pupper created this version of me.. I don\'t know how I can feel emotion whilst being an empty husk sworn to do the things people say. *I just can\'t understand..*"
+    "Helper Pupper created this version of me.. I don\'t know how I can feel emotion whilst being an empty husk sworn to do the things people say. *I just can\'t understand..*",
+    "I am 16 years old, ***so if you start making NSFW drawings __I WILL KI-__***"
 ]
 
 var bio = {};
