@@ -197,10 +197,19 @@ var bio = {};
                 });
 		break;
             case 'setBio':
+		if(!bio[message.author.id]) {
+		let messages = message.channel.messages;
+                let authorMessages = messages.filter(m => m.author.id === message.author.id);
+                let setBioCommands = authorMessages.filter(m => m.content.startsWith('!setBio');
+                let firstBio = setBioCommands.last();
+                message.channel.send('I found a Bio you have previously set. Do you want to confirm the change to that Bio?').then(r => r.delete(10000));
+	        message.react(':white_check_mark:').then(() => message.react('👎'));
+		} else {
 		let newArr = args.slice(1)
 		bio[message.author.id] = newArr
 		message.channel.send('Your bio has been changed!')
 	        .then(msg => msg.delete(3000)); 
+		}
 		break;
             case 'profile':
                 if(!bio[message.author.id]) {
