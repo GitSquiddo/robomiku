@@ -203,7 +203,27 @@ var bio = {};
                 let setBioCommands = authorMessages.filter(m => m.content.startsWith('!setBio');
                 let firstBio = setBioCommands.last();
                 message.channel.send('I found a Bio you have previously set. Do you want to confirm the change to that Bio?').then(r => r.delete(10000));
-	        message.react(':white_check_mark:').then(() => message.react('👎'));
+	        message.react('✅').then(() => message.react('❎'));
+		const filter = (reaction, user) => {
+                return ['✅', '❎'].includes(reaction.emoji.name) && user.id === message.author.id;
+                };
+                message.awaitReactions(filter, { max: 1, time: 10000, errors: ['time'] })
+                    .then(collected => {
+                        const reaction = collected.first();
+
+                        if (reaction.emoji.name === '✅') {
+                            bio[message.author.id] = firstBio
+			    message.reply('Past Bio successfully restored!')
+			    .then(msg => msg.delete(3000));
+                        }
+                        else {
+                            message.reply('Okey, I\'ll delete this Bio.')
+			    .then(msg => msg.delete(3000)); 
+                        }
+                    })
+                    .catch(collected => {
+                        message.channel.send('You didn\'t respond, so I\'ll throw this Bio into the abyss. *Buh-bye!*');
+                    });
 		} else {
 		let newArr = args.slice(1)
 		bio[message.author.id] = newArr
