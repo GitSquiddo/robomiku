@@ -20,9 +20,6 @@ const PREFIX = '!';
 
 var servers = {};
 
-function joinArgs() {
-    console.log(Array.prototype.join.call(arguments, ' '));
-}
 
 var activityDoing = [
     "you!",
@@ -147,6 +144,10 @@ var bio = {};
    client.on('message', async message => {
 
         let args = message.content.substring(PREFIX.length).split(" ");
+	   
+function joinArgs() {
+   message(Array.prototype.join.call(arguments, ' '));
+}
 	   
         switch (args[0]) {
             case 'ping':
