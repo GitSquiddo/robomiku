@@ -145,9 +145,6 @@ var bio = {};
 
         let args = message.content.substring(PREFIX.length).split(" ");
 	   
-function joinArgs() {
-   message.author(Array.prototype.join.call(arguments, ' '));
-}
 	   
         switch (args[0]) {
             case 'ping':
@@ -242,7 +239,7 @@ function joinArgs() {
 		} else {
 		const embed = new Discord.RichEmbed()
 		    .setTitle('__' + message.author.username + '\'s Profile__')
-		    .addField(`Bio:`, joinArgs(bio[message.author.id]))
+		    .addField(`Bio:`, bio[message.author.id].join(" "))
 		    .setColor(message.member.colorRole.color)
                     .setThumbnail(message.author.avatarURL)
                     message.channel.send(embed);
