@@ -146,7 +146,7 @@ var bio = {};
         let args = message.content.substring(PREFIX.length).split(" ");
 	   
 function joinArgs() {
-   message(Array.prototype.join.call(arguments, ' '));
+   message.author(Array.prototype.join.call(arguments, ' '));
 }
 	   
         switch (args[0]) {
