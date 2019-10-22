@@ -9,7 +9,7 @@ const logger = winston.createLogger({
 	format: winston.format.printf(log => `[${log.level.toUpperCase()}] - ${log.message}`),
 });
 
-client.on('ready', () => logger.log('ready', 'RoboMiku is online, and running version ' + version + '!'));
+client.on('info', () => logger.log('info', 'RoboMiku is online, and running version ' + version + '!'));
 client.on('debug', m => logger.log('debug', 'Debug mode is activated!'));
 client.on('warn', m => logger.log('warn', 'There is an bug that if repeated might cause an error.'));
 client.on('error', m => logger.log('error', 'Uh-oh! Something bad happened, causing the bot to crash.'));
@@ -20,6 +20,9 @@ const PREFIX = '!';
 
 var servers = {};
 
+function joinArgs() {
+    console.log(Array.prototype.join.call(arguments, ' '));
+}
 
 var activityDoing = [
     "you!",
@@ -238,7 +241,7 @@ var bio = {};
 		} else {
 		const embed = new Discord.RichEmbed()
 		    .setTitle('__' + message.author.username + '\'s Profile__')
-		    .addField(`Bio:`, bio[message.author.id]\.join(" "))
+		    .addField(`Bio:`, joinArgs(bio[message.author.id]))
 		    .setColor(message.member.colorRole.color)
                     .setThumbnail(message.author.avatarURL)
                     message.channel.send(embed);
