@@ -237,6 +237,7 @@ var bio = {};
 		return message.channel.send('Sorry, please set a bio with `!setBio` to view your profile!')
 		.then(msg => msg.delete(3000)); 
 		} else {
+		console.log(bio[message.author.id].join(" "))
 		const embed = new Discord.RichEmbed()
 		    .setTitle('__' + message.author.username + '\'s Profile__')
 		    .addField(`Bio:`, bio[message.author.id])
