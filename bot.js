@@ -204,10 +204,7 @@ var bio = {};
                 let setBioCommands = authorMessages.filter(m => m.content.startsWith('!setBio'));
                 let firstBio = setBioCommands.last();
                 message.channel.send('I found a Bio you have previously set. Do you want to confirm the change to that Bio?')
-	        .then(function (message) {
-                       message.react("✅")
-                       message.react("❎");
-		});
+                client.message.react("✅").then(client.message.react("❎"));
 		const filter = (reaction, user) => {
                 return ['✅', '❎'].includes(reaction.emoji.name) && user.id === message.author.id;
                 };
