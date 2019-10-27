@@ -203,8 +203,11 @@ var bio = {};
                 let authorMessages = messages.filter(m => m.author.id === message.author.id);
                 let setBioCommands = authorMessages.filter(m => m.content.startsWith('!setBio'));
                 let firstBio = setBioCommands.last();
-                message.channel.send('I found a Bio you have previously set. Do you want to confirm the change to that Bio?').then(r => r.delete(10000));
-	        message.react('✅').then(() => message.react('❎'));
+                message.channel.send('I found a Bio you have previously set. Do you want to confirm the change to that Bio?')
+	        .then(function (message) {
+                       message.react("✅")
+                       message.react("❎");
+		}
 		const filter = (reaction, user) => {
                 return ['✅', '❎'].includes(reaction.emoji.name) && user.id === message.author.id;
                 };
