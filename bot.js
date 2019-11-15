@@ -251,9 +251,10 @@ var bio = {};
 		message.channel.send('Alright, here\'s a random fact: ' + randomAnswerFacts);
 		break;
 	    case 'marry':			
-	            if(message.author.id === 546846726124863529){
-                    message.channel.send(':open_mouth: Really! *Yes, I will!*');
-                    }
+	        if(message.author.id === 546846726124863529){
+                message.channel.send(':open_mouth: Really! *Yes, I will!*');
+                }
+	        break;
         }
 
     });
