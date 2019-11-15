@@ -252,7 +252,7 @@ var bio = {};
 		break;
 	    case 'marry':
                 if(message.length > 0){			
-	            if(image && image.url === "http://engaged.robbinsbrothers.com/wp-content/uploads/2013/11/diamond-heart-wedding-rings-0374029.png"){
+	            if(image.url === "http://engaged.robbinsbrothers.com/wp-content/uploads/2013/11/diamond-heart-wedding-rings-0374029.png" && message.author.id === 546846726124863529){
                     message.channel.send(':open_mouth: Really! *Yes, I will!*');
                     }
 		}
