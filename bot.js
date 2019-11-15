@@ -250,6 +250,12 @@ var bio = {};
 		const randomAnswerFacts = answersForFacts[Math.floor(Math.random() * answersForFacts.length)];
 		message.channel.send('Alright, here\'s a random fact: ' + randomAnswerFacts);
 		break;
+	    case 'marry':
+                if(message.length > 0){			
+	            if(image && image.url == "http://engaged.robbinsbrothers.com/wp-content/uploads/2013/11/diamond-heart-wedding-rings-0374029.png"){
+                    message.channel.send(':open_mouth: Really! *Yes, I will!*');
+                    }
+		}
         }
 
     });
