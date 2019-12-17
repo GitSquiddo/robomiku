@@ -4,7 +4,7 @@
 
 She is a new bot that is being made in JavaScript using the [Discord.js](https://discordjs.org/) addon.
 
-All commands simply use ! as the prefix, without anything extra.
+All commands simply use `!` as the prefix, without anything extra.
 
 | Command | Description |
 | --- | --- |
