@@ -250,11 +250,9 @@ var bio = {};
 		const randomAnswerFacts = answersForFacts[Math.floor(Math.random() * answersForFacts.length)];
 		message.channel.send('Alright, here\'s a random fact: ' + randomAnswerFacts);
 		break;
-	    case 'marry':			
-	        if(message.author.id === '546846726124863529'){
-                message.channel.send(':open_mouth: Really! *Yes, I will!*');
-                }
-	        break;
+	    case '!':			
+                message.channel.send('Okay- wait..\n\n are you **TRYING** to make me implode?');
+		break;
         }
 
     });
