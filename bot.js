@@ -9,7 +9,7 @@ const logger = winston.createLogger({
 	format: winston.format.printf(log => `[${log.level.toUpperCase()}] - ${log.message}`),
 });
 
-client.on('info', () => logger.log('ready', 'RoboMiku is online, and running version ' + version + '!'));
+client.on('info', () => logger.log('ready', 'RoboMiku is online, running version ' + version + '.'));
 client.on('debug', m => logger.log('debug', 'Debug mode is activated!'));
 client.on('warn', m => logger.log('warn', 'There is an bug that if repeated might cause an error.'));
 client.on('error', m => logger.log('error', 'Uh-oh! Something bad happened, causing the bot to crash.'));
@@ -82,7 +82,8 @@ var answersForMew2 = [
     "Where\'s the dog?",
     "Very interesting.. :thinking:",
     "So meow. Very cute. :dog:",
-    "~~Can I go stabby someone?~~"
+    "~~Can I go stabby someone?~~",
+    ":cat:"
 ]
 
 var answersForPing = [    
@@ -93,7 +94,8 @@ var answersForPing = [
     "Pinger ponger!",
     "https://media.giphy.com/media/fvcrSYkOmtP8c/giphy.gif",
     "ERROR: PING IS NOT A COMMAND, SICKO",
-    "File \'pong.exe\' downloaded."
+    "File \'pong.exe\' downloaded.",
+    "Haduken!! :fire:"
 ]
 
 var gifs = [
@@ -108,19 +110,22 @@ var gifs = [
     "https://media.giphy.com/media/LU3uRsnett7gs/giphy.gif",
     "https://media.giphy.com/media/gZBYbXHtVcYKs/giphy.gif",
     "https://media.giphy.com/media/4QxQgWZHbeYwM/giphy.gif",
-    "https://media.giphy.com/media/f4V2mqvv0wT9m/giphy.gif"
+    "https://media.giphy.com/media/f4V2mqvv0wT9m/giphy.gif",
+    "https://media.giphy.com/media/iHmodiTc8t0BO/giphy.gif",
+    "https://media.giphy.com/media/uU8IHAFVDVhks/giphy.gif"
 ]
 
 var answersForFacts = [
     "According to all known laws of aviation, there is no way a bee should be able to fly.",
     "The software that created me was released on August 31, 2007. ~~Wait, maybe I shouldn\'t have said that...~~",
-    "God is in heaven. Wait, *hey, who requested this fact? Tasty? ~~Of course...~~*",
+    "..God is in heaven. Wait, *hey, who requested this fact? Tasty? ~~Of course...~~*",
     "By 2020, waifus will take over the world. ~~Shoot, the boss will be mad!~~",
     "My name means 'The First Sound From The Future'.",
     "Helper Pupper created this version of me.. I don\'t know how I can feel emotion whilst being an empty husk sworn to do the things people say. *I just can\'t understand..*",
     "I am 16 years old, ***so if you start making NSFW drawings __I WILL KI-__***",
     "You probably think Nacho Cheese was the first Dorito flavor, but it\'s actually Taco!",
-    "My creator\'s phone runs Android 8, A.K.A. Android Oreo!"
+    "My creator\'s phone runs Android 8, A.K.A. Android Oreo!",
+    "I star in my own RPG! *Well, I will soon, at least..*"
 ]
 
 var bio = {};
