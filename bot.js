@@ -39,7 +39,10 @@ var activityType = [
 var blessedImages = [
     "https://i.postimg.cc/Sxn1mJkJ/spookytime.jpg",
     "https://i.postimg.cc/KzfDP2x6/Screenshot-20200117-180929.png",
-    "https://i.postimg.cc/mkN3LW6X/Screenshot-20200117-180655.png"
+    "https://i.postimg.cc/mkN3LW6X/Screenshot-20200117-180655.png",
+    "https://i.postimg.cc/zX2bnfWw/Screenshot-20200117-181554.png",
+    "https://i.postimg.cc/DwWW5Kd9/Screenshot-20200117-181658.png",
+    "https://i.postimg.cc/3wmk5Cq9/Screenshot-20200117-181203.png"
 ]
 
 var version = '0.1.2a'
