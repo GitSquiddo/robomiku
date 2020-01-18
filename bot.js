@@ -36,6 +36,11 @@ var activityType = [
     "LISTENING"
 ]
 
+var blessedImages = [
+    "https://i.postimg.cc/Sxn1mJkJ/spookytime.jpg",
+    "https://i.postimg.cc/KzfDP2x6/Screenshot-20200117-180929.png"
+]
+
 var version = '0.1.2a'
 
 const usedCommandRecently = new Set();
@@ -257,6 +262,10 @@ var bio = {};
 		break;
 	    case '!':			
                 message.channel.send('Okay- wait..\n\n are you **TRYING** to make me implode?');
+		break;
+	    case 'bless':
+		const randomAnswerBlessedImages = blessedImages[Math.floor(Math.random() * blessedImages.length)];
+                message.channel.send("Your prayers have been answered by me! Have a blessed image: " + randomAnswerBlessedImages);
 		break;
         }
 
