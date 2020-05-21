@@ -134,7 +134,8 @@ var answersForFacts = [
     "I am 16 years old, ***so if you start making NSFW drawings __I WILL KI-__***",
     "You probably think Nacho Cheese was the first Dorito flavor, but it\'s actually Taco!",
     "My creator\'s phone runs Android 8, A.K.A. Android Oreo!",
-    "I star in my own RPG! *Well, I will soon, at least..*"
+    "I star in my own RPG! *Well, I will soon, at least..*",
+    "The Miku Invasion will take over the world by 2021. *Bow down to me..*"
 ]
 
 var bio = {};
@@ -165,13 +166,8 @@ var bio = {};
                 const randomAnswerPing = answersForPing[Math.floor(Math.random() * answersForPing.length)];
                 message.channel.send(randomAnswerPing)
                 break;
-            case 'info':
-                if (args[1] === 'version') {
-                    message.channel.send('The current version is ' + version + '. ' + 'Keep your eyes peeled for updates!')
-                } else {
-                    message.channel.send('Sorry, that\'s not a valid command! Try again. :thumbsdown:')
-                        .then(msg => msg.delete(5000));
-                }
+            case 'version':
+                message.channel.send('The current version is ' + version + '. ' + 'Keep your eyes peeled for updates!')
                 break;
             case 'clear':
                 if (!args[1]) return message.reply('Oops! You didn\'t define how many you wanted to clear, so I couldn\'t do anything! :worried: Please try again.')
